@@ -15,8 +15,8 @@ jobs:
          - name: List Files
            run: ls -ltr
            
-        #  - name: Read File
-        #    run: cat README.md 
+         - name: Read File
+           run: cat README.md 
          
-         - name: Print present working directory
-           run: pwd
+        #  - name: Print present working directory
+        #    run: pwd
