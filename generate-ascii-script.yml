@@ -15,7 +15,7 @@ jobs:
          - name: sleep for 30 seconds
            run: sleep 30
 
-      test_job:
+     test_job:
         runs-on: ubuntu-latest
         steps:
          - name: sleep for 10 sec
@@ -24,11 +24,14 @@ jobs:
          - name: Test file exists
            run: grep -i "dragon" dragon.txt
 
-       deploy_job:
+     deploy_job:
         runs_on:
           steps:
             - name: Read the file
-              run :
+              run : cat dragon.txt
+
+            - name: deploy
+              run: echo deploying....  
 
 
         #  - name: List Files
