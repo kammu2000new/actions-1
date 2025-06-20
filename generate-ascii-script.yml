@@ -9,35 +9,31 @@ jobs:
          - name: Install cowsay program
            uses: sudo apt-get install cowsay -y
 
-         - name: Execute cowsay command 
+         - name: Execute cowsay command
            run: cowsay -f dragon "Run for cover...I am a DRAGON" >> dragon.txt
-           
-         - name: sleep for 30 seconds 
+
+         - name: sleep for 30 seconds
            run: sleep 30
 
       test_job:
         runs-on: ubuntu-latest
-        steps: 
+        steps:
          - name: sleep for 10 sec
            run: sleep 10
-                  
+
          - name: Test file exists
            run: grep -i "dragon" dragon.txt
-            
+
        deploy_job:
         runs_on:
           steps:
             - name: Read the file
-              run :      
+              run :
 
-         
-         
-         
+
         #  - name: List Files
         #    run: ls -ltr
-           
         #  - name: Read File
-        #    run: cat README.md 
-         
+        #    run: cat README.md
         #  - name: Print present working directory
         #    run: pwd
