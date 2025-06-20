@@ -25,13 +25,13 @@ jobs:
            run: grep -i "dragon" dragon.txt
 
      deploy_job:
-        runs_on: ubuntu-latest
-          steps:
-            - name: Read the file
-              run : cat dragon.txt
+        runs-on: ubuntu-latest
+        steps:
+          - name: Read the file
+            run : cat dragon.txt
 
-            - name: deploy
-              run: echo deploying....  
+          - name: deploy
+            run: echo deploying....
 
 
         #  - name: List Files
